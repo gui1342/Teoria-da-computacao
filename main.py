@@ -41,8 +41,39 @@ def substituir_grupos(string_original, substituir, substituto):
             i += 1 #incrementa 1 indice
     return resultado
 
-
+def juntarListas(l1, l2):
+    l3 = []
+    for x in l1:
+        if x not in l3:
+            l3.append(x)
+    for y in l2:
+        if y not in l3:
+            l3.append(y)
+    return l3
+# aqui vai fazer a união de conjuntos
+def juntarConjunto(c1, c2):
+    c1 = c1[1:-1]  
+    c2 = c2[1:-1]
+    resultado = ""
+    for c in c1 + c2:
+        if c not in resultado:
+            resultado += c
+    return "[" + resultado + "]"
+# Teste
 #print(substituir_digitos("975li90", "ya"))
 #print(substituir_set_caracteres("975i0a", "ia0", "t"))
 #print(substituir_range_letras("je3s5560lv", "[j-s]", "z"))
 #print(substituir_grupos("vgu69utc", "(utc)", "*"))
+# faz a junção, mas sem repetir
+L1 = ["a", "ab", "abc","x"]
+L2 = ["b", "ab", "bc","bcd"]
+print("list 1:", L1)
+print("list 2:", L2)
+juntar = juntarListas(L1, L2)
+print("Listas juntas:", juntar)
+
+c1 = "[abcxx]"
+c2 = "[bcdxxx]"
+print("Conj 1:", c1)
+print("Conj 2:", c2)
+print("União de conjuntos:", juntarConjunto(c1, c2))
