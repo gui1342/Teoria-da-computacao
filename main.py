@@ -65,6 +65,7 @@ def juntarConjunto(c1, c2):
 #print(substituir_range_letras("je3s5560lv", "[j-s]", "z"))
 #print(substituir_grupos("vgu69utc", "(utc)", "*"))
 # faz a junção, mas sem repetir
+
 L1 = ["a", "ab", "abc","x"]
 L2 = ["b", "ab", "bc","bcd"]
 print("list 1:", L1)
